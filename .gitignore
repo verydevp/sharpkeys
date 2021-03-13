@@ -1,4 +1,3 @@
-
-SharpKeys/.vs/*
-SharpKeys/obj/*
-SharpKeys/bin/*
+.vs/*
+obj/*
+in/*
