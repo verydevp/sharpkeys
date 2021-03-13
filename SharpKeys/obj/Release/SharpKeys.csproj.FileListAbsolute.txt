@@ -1,9 +1,0 @@
-C:\Users\user\source\repos\verydevp\sharpkeys\SharpKeys\bin\Release\SharpKeys.exe.config
-C:\Users\user\source\repos\verydevp\sharpkeys\SharpKeys\bin\Release\SharpKeys.exe
-C:\Users\user\source\repos\verydevp\sharpkeys\SharpKeys\obj\Release\SharpKeys.csprojAssemblyReference.cache
-C:\Users\user\source\repos\verydevp\sharpkeys\SharpKeys\obj\Release\SharpKeys.Dialog_KeyItem.resources
-C:\Users\user\source\repos\verydevp\sharpkeys\SharpKeys\obj\Release\SharpKeys.Dialog_KeyPress.resources
-C:\Users\user\source\repos\verydevp\sharpkeys\SharpKeys\obj\Release\SharpKeys.Dialog_Main.resources
-C:\Users\user\source\repos\verydevp\sharpkeys\SharpKeys\obj\Release\SharpKeys.csproj.GenerateResource.cache
-C:\Users\user\source\repos\verydevp\sharpkeys\SharpKeys\obj\Release\SharpKeys.csproj.CoreCompileInputs.cache
-C:\Users\user\source\repos\verydevp\sharpkeys\SharpKeys\obj\Release\SharpKeys.exe
