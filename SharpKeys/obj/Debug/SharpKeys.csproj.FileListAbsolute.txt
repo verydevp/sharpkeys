@@ -1,0 +1,11 @@
+C:\Users\user\Source\Repos\verydevp\sharpkeys\SharpKeys\bin\Debug\SharpKeys.exe.config
+C:\Users\user\Source\Repos\verydevp\sharpkeys\SharpKeys\bin\Debug\SharpKeys.exe
+C:\Users\user\Source\Repos\verydevp\sharpkeys\SharpKeys\bin\Debug\SharpKeys.pdb
+C:\Users\user\Source\Repos\verydevp\sharpkeys\SharpKeys\obj\Debug\SharpKeys.csprojAssemblyReference.cache
+C:\Users\user\Source\Repos\verydevp\sharpkeys\SharpKeys\obj\Debug\SharpKeys.Dialog_KeyItem.resources
+C:\Users\user\Source\Repos\verydevp\sharpkeys\SharpKeys\obj\Debug\SharpKeys.Dialog_KeyPress.resources
+C:\Users\user\Source\Repos\verydevp\sharpkeys\SharpKeys\obj\Debug\SharpKeys.Dialog_Main.resources
+C:\Users\user\Source\Repos\verydevp\sharpkeys\SharpKeys\obj\Debug\SharpKeys.csproj.GenerateResource.cache
+C:\Users\user\Source\Repos\verydevp\sharpkeys\SharpKeys\obj\Debug\SharpKeys.csproj.CoreCompileInputs.cache
+C:\Users\user\Source\Repos\verydevp\sharpkeys\SharpKeys\obj\Debug\SharpKeys.exe
+C:\Users\user\Source\Repos\verydevp\sharpkeys\SharpKeys\obj\Debug\SharpKeys.pdb
