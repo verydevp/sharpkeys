@@ -25,32 +25,22 @@ namespace SharpKeys
 
         // Dirty flag (to see track if mappings have been saved)
         private bool m_bDirty = false;
-
-        private System.Windows.Forms.ListView lvKeys;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.ColumnHeader lvcFrom;
-        private System.Windows.Forms.ColumnHeader lvcTo;
-        private System.Windows.Forms.Button btnDeleteAll;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel urlMain;
         private System.Windows.Forms.MenuItem menuItem5;
         private System.Windows.Forms.MenuItem mniAdd;
         private System.Windows.Forms.MenuItem mniEdit;
         private System.Windows.Forms.MenuItem mniDelete;
         private System.Windows.Forms.MenuItem mniDeleteAll;
         private System.Windows.Forms.ContextMenu mnuPop;
-        private Panel mainPanel;
-        private Panel headerPanel;
-        private Label displayProduct;
-        private LinkLabel urlCode;
-        private Button btnLoadKeys;
+        private Button btnSave;
+        private Button btnDeleteAll;
+        private Button btnDelete;
+        private Button btnEdit;
+        private Button btnAdd;
+        private ListView lvKeys;
+        private ColumnHeader lvcFrom;
+        private ColumnHeader lvcTo;
         private Button btnSaveKeys;
+        private Button btnLoadKeys;
 
         /// <summary>
         /// Required designer variable.
@@ -87,10 +77,6 @@ namespace SharpKeys
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dialog_Main));
-            this.lvKeys = new System.Windows.Forms.ListView();
-            this.lvcFrom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lvcTo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.mnuPop = new System.Windows.Forms.ContextMenu();
             this.mniAdd = new System.Windows.Forms.MenuItem();
             this.mniEdit = new System.Windows.Forms.MenuItem();
@@ -98,57 +84,16 @@ namespace SharpKeys
             this.menuItem5 = new System.Windows.Forms.MenuItem();
             this.mniDeleteAll = new System.Windows.Forms.MenuItem();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDeleteAll = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDeleteAll = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.urlMain = new System.Windows.Forms.LinkLabel();
-            this.mainPanel = new System.Windows.Forms.Panel();
-            this.headerPanel = new System.Windows.Forms.Panel();
-            this.displayProduct = new System.Windows.Forms.Label();
-            this.urlCode = new System.Windows.Forms.LinkLabel();
-            this.btnLoadKeys = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.lvKeys = new System.Windows.Forms.ListView();
+            this.lvcFrom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvcTo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSaveKeys = new System.Windows.Forms.Button();
-            this.mainPanel.SuspendLayout();
-            this.headerPanel.SuspendLayout();
+            this.btnLoadKeys = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // lvKeys
-            // 
-            this.lvKeys.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvKeys.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.lvcFrom,
-            this.lvcTo});
-            this.lvKeys.ContextMenu = this.mnuPop;
-            this.lvKeys.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lvKeys.FullRowSelect = true;
-            this.lvKeys.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvKeys.HideSelection = false;
-            this.lvKeys.Location = new System.Drawing.Point(19, 55);
-            this.lvKeys.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.lvKeys.MultiSelect = false;
-            this.lvKeys.Name = "lvKeys";
-            this.lvKeys.Size = new System.Drawing.Size(771, 319);
-            this.lvKeys.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.lvKeys.TabIndex = 0;
-            this.lvKeys.UseCompatibleStateImageBehavior = false;
-            this.lvKeys.View = System.Windows.Forms.View.Details;
-            this.lvKeys.SelectedIndexChanged += new System.EventHandler(this.lvKeys_SelectedIndexChanged);
-            this.lvKeys.DoubleClick += new System.EventHandler(this.lvKeys_DoubleClick);
-            // 
-            // lvcFrom
-            // 
-            this.lvcFrom.Text = "Map this key:";
-            // 
-            // lvcTo
-            // 
-            this.lvcTo.Text = "To this key:";
             // 
             // mnuPop
             // 
@@ -192,230 +137,138 @@ namespace SharpKeys
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(545, 381);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Location = new System.Drawing.Point(460, 379);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(141, 28);
+            this.btnSave.Size = new System.Drawing.Size(124, 38);
             this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "&Write to Registry";
+            this.btnSave.Text = "레지스트리에 쓰기";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnClose
+            // btnDeleteAll
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(694, 381);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(96, 28);
-            this.btnClose.TabIndex = 6;
-            this.btnClose.Text = "&Close";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAdd.Location = new System.Drawing.Point(18, 382);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(96, 28);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "&Add";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnDeleteAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDeleteAll.Location = new System.Drawing.Point(195, 379);
+            this.btnDeleteAll.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnDeleteAll.Name = "btnDeleteAll";
+            this.btnDeleteAll.Size = new System.Drawing.Size(74, 38);
+            this.btnDeleteAll.TabIndex = 4;
+            this.btnDeleteAll.Text = "전부 삭제";
+            this.btnDeleteAll.Click += new System.EventHandler(this.btnDeleteAll_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDelete.Location = new System.Drawing.Point(226, 381);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Location = new System.Drawing.Point(137, 379);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(96, 28);
+            this.btnDelete.Size = new System.Drawing.Size(51, 38);
             this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "&Delete";
+            this.btnDelete.Text = "삭제";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEdit.Location = new System.Drawing.Point(122, 382);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Location = new System.Drawing.Point(76, 379);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(96, 28);
+            this.btnEdit.Size = new System.Drawing.Size(51, 38);
             this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "&Edit";
+            this.btnEdit.Text = "수정";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btnDeleteAll
+            // btnAdd
             // 
-            this.btnDeleteAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDeleteAll.Location = new System.Drawing.Point(330, 381);
-            this.btnDeleteAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnDeleteAll.Name = "btnDeleteAll";
-            this.btnDeleteAll.Size = new System.Drawing.Size(96, 28);
-            this.btnDeleteAll.TabIndex = 4;
-            this.btnDeleteAll.Text = "De&lete All";
-            this.btnDeleteAll.Click += new System.EventHandler(this.btnDeleteAll_Click);
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAdd.Location = new System.Drawing.Point(13, 379);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(51, 38);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "추가";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // label11
+            // lvKeys
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.lvKeys.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label11.Location = new System.Drawing.Point(12, 459);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(784, 4);
-            this.label11.TabIndex = 7;
+            this.lvKeys.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvcFrom,
+            this.lvcTo});
+            this.lvKeys.ContextMenu = this.mnuPop;
+            this.lvKeys.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lvKeys.FullRowSelect = true;
+            this.lvKeys.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvKeys.HideSelection = false;
+            this.lvKeys.Location = new System.Drawing.Point(13, 12);
+            this.lvKeys.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.lvKeys.MultiSelect = false;
+            this.lvKeys.Name = "lvKeys";
+            this.lvKeys.Size = new System.Drawing.Size(701, 361);
+            this.lvKeys.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.lvKeys.TabIndex = 0;
+            this.lvKeys.UseCompatibleStateImageBehavior = false;
+            this.lvKeys.View = System.Windows.Forms.View.Details;
+            this.lvKeys.SelectedIndexChanged += new System.EventHandler(this.lvKeys_SelectedIndexChanged);
+            this.lvKeys.DoubleClick += new System.EventHandler(this.lvKeys_DoubleClick);
             // 
-            // label1
+            // lvcFrom
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Enabled = false;
-            this.label1.Location = new System.Drawing.Point(20, 474);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(379, 17);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "SharpKeys 3.9.2 - Copyright 2004 - 2020 RandyRants.com";
+            this.lvcFrom.Text = "매핑 할 키:";
             // 
-            // label2
+            // lvcTo
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Enabled = false;
-            this.label2.Location = new System.Drawing.Point(20, 496);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(300, 17);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Registry hack for remapping keys for Windows";
-            // 
-            // urlMain
-            // 
-            this.urlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.urlMain.AutoSize = true;
-            this.urlMain.Location = new System.Drawing.Point(601, 496);
-            this.urlMain.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.urlMain.Name = "urlMain";
-            this.urlMain.Size = new System.Drawing.Size(177, 17);
-            this.urlMain.TabIndex = 12;
-            this.urlMain.TabStop = true;
-            this.urlMain.Text = "http://www.randyrants.com/";
-            this.urlMain.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.urlMain.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.urlMain_LinkClicked);
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainPanel.BackColor = System.Drawing.Color.Transparent;
-            this.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mainPanel.Controls.Add(this.btnLoadKeys);
-            this.mainPanel.Controls.Add(this.btnSaveKeys);
-            this.mainPanel.Controls.Add(this.headerPanel);
-            this.mainPanel.Controls.Add(this.urlCode);
-            this.mainPanel.Controls.Add(this.urlMain);
-            this.mainPanel.Controls.Add(this.label2);
-            this.mainPanel.Controls.Add(this.lvKeys);
-            this.mainPanel.Controls.Add(this.btnAdd);
-            this.mainPanel.Controls.Add(this.label1);
-            this.mainPanel.Controls.Add(this.btnEdit);
-            this.mainPanel.Controls.Add(this.btnDelete);
-            this.mainPanel.Controls.Add(this.label11);
-            this.mainPanel.Controls.Add(this.btnDeleteAll);
-            this.mainPanel.Controls.Add(this.btnSave);
-            this.mainPanel.Controls.Add(this.btnClose);
-            this.mainPanel.Location = new System.Drawing.Point(16, 15);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(810, 529);
-            this.mainPanel.TabIndex = 12;
-            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
-            // 
-            // headerPanel
-            // 
-            this.headerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.headerPanel.BackColor = System.Drawing.Color.Transparent;
-            this.headerPanel.Controls.Add(this.displayProduct);
-            this.headerPanel.Location = new System.Drawing.Point(0, 0);
-            this.headerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(808, 36);
-            this.headerPanel.TabIndex = 7;
-            this.headerPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.headerPanel_Paint);
-            // 
-            // displayProduct
-            // 
-            this.displayProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.displayProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayProduct.ForeColor = System.Drawing.Color.White;
-            this.displayProduct.Location = new System.Drawing.Point(13, 2);
-            this.displayProduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.displayProduct.Name = "displayProduct";
-            this.displayProduct.Size = new System.Drawing.Size(781, 28);
-            this.displayProduct.TabIndex = 1;
-            this.displayProduct.Text = "SharpKeys";
-            this.displayProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // urlCode
-            // 
-            this.urlCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.urlCode.AutoSize = true;
-            this.urlCode.Location = new System.Drawing.Point(515, 474);
-            this.urlCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.urlCode.Name = "urlCode";
-            this.urlCode.Size = new System.Drawing.Size(265, 17);
-            this.urlCode.TabIndex = 11;
-            this.urlCode.TabStop = true;
-            this.urlCode.Text = "https://github.com/randyrants/sharpkeys/";
-            this.urlCode.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.urlCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.urlMain_LinkClicked);
-            // 
-            // btnLoadKeys
-            // 
-            this.btnLoadKeys.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLoadKeys.Location = new System.Drawing.Point(18, 418);
-            this.btnLoadKeys.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLoadKeys.Name = "btnLoadKeys";
-            this.btnLoadKeys.Size = new System.Drawing.Size(96, 28);
-            this.btnLoadKeys.TabIndex = 7;
-            this.btnLoadKeys.Text = "L&oad keys...";
-            this.btnLoadKeys.Click += new System.EventHandler(this.btnLoadKeys_Click);
+            this.lvcTo.Text = "이 키로 매핑:";
             // 
             // btnSaveKeys
             // 
             this.btnSaveKeys.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSaveKeys.Location = new System.Drawing.Point(122, 418);
-            this.btnSaveKeys.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSaveKeys.Location = new System.Drawing.Point(657, 379);
+            this.btnSaveKeys.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSaveKeys.Name = "btnSaveKeys";
-            this.btnSaveKeys.Size = new System.Drawing.Size(96, 28);
+            this.btnSaveKeys.Size = new System.Drawing.Size(57, 38);
             this.btnSaveKeys.TabIndex = 8;
-            this.btnSaveKeys.Text = "&Save keys...";
+            this.btnSaveKeys.Text = "키 저장";
             this.btnSaveKeys.Click += new System.EventHandler(this.btnSaveKeys_Click);
+            // 
+            // btnLoadKeys
+            // 
+            this.btnLoadKeys.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLoadKeys.Location = new System.Drawing.Point(592, 379);
+            this.btnLoadKeys.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnLoadKeys.Name = "btnLoadKeys";
+            this.btnLoadKeys.Size = new System.Drawing.Size(57, 38);
+            this.btnLoadKeys.TabIndex = 7;
+            this.btnLoadKeys.Text = "키 로드";
+            this.btnLoadKeys.Click += new System.EventHandler(this.btnLoadKeys_Click);
             // 
             // Dialog_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 559);
-            this.Controls.Add(this.mainPanel);
+            this.ClientSize = new System.Drawing.Size(727, 429);
+            this.Controls.Add(this.btnSaveKeys);
+            this.Controls.Add(this.btnLoadKeys);
+            this.Controls.Add(this.lvKeys);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnDeleteAll);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnAdd);
             this.DoubleBuffered = true;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimumSize = new System.Drawing.Size(847, 580);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(743, 445);
             this.Name = "Dialog_Main";
-            this.Text = "SharpKeys";
+            this.ShowIcon = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Closing += new System.ComponentModel.CancelEventHandler(this.Dialog_Main_Closing);
             this.Load += new System.EventHandler(this.Dialog_Main_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Dialog_Main_Paint);
             this.Resize += new System.EventHandler(this.Dialog_Main_Resize);
-            this.mainPanel.ResumeLayout(false);
-            this.mainPanel.PerformLayout();
-            this.headerPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -451,10 +304,6 @@ namespace SharpKeys
                 regKey.Close();
             }
 
-            if (nWarning == 0)
-            {
-                MessageBox.Show("Welcome to SharpKeys!\n\nThis application will add one key to your registry that allows you\nto change how certain keys on your keyboard will work.\n\nYou must be running Windows 2000 through Windows 10 for this to be supported and you'll be using SharpKeys at your own risk!\n\nEnjoy!\nRandyRants.com", "SharpKeys");
-            }
 
             // Set the WinPos
             m_rcWindow = rc;
@@ -543,7 +392,7 @@ namespace SharpKeys
             m_bDirty = false;
             Cursor = Cursors.Default;
 
-            MessageBox.Show("Key Mappings have been successfully stored to the registry.\n\nPlease logout or reboot for these changes to take effect!", "SharpKeys");
+            MessageBox.Show("세이브 완료.\n\n로그아웃하거나 재부팅시 적용됨", "");
         }
 
         private byte[] DefineScancodeMap()
@@ -604,7 +453,7 @@ namespace SharpKeys
             // max out the mapping at 104
             if (lvKeys.Items.Count >= 104)
             {
-                MessageBox.Show("The maximum number of mappings SharpKeys supports is 16.\n\nPlease delete an existing mapping before adding a new one!", "SharpKeys");
+                MessageBox.Show("최대 매핑 가능 키 갯수는 104개입니다.\n\n기존 매핑을 삭제한뒤에 추가하세요.", "");
                 return;
             }
 
@@ -638,7 +487,7 @@ namespace SharpKeys
             dlg.lbTo.Sorted = true;
 
             // UI stuff
-            dlg.Text = "SharpKeys: Add New Key Mapping";
+            dlg.Text = "새 키 매핑";
             dlg.lbFrom.SelectedIndex = 0;
             dlg.lbTo.SelectedIndex = 0;
             if (dlg.ShowDialog() == DialogResult.OK)
@@ -658,7 +507,7 @@ namespace SharpKeys
             // make sure something was selecting
             if (lvKeys.SelectedItems.Count <= 0)
             {
-                MessageBox.Show("Please select a mapping to edit!", "SharpKeys");
+                MessageBox.Show("수정할 키를 선택하세요!", "");
                 return;
             }
 
@@ -708,7 +557,7 @@ namespace SharpKeys
             else
                 dlg.lbTo.SelectedIndex = 0;
 
-            dlg.Text = "SharpKeys: Edit Key Mapping";
+            dlg.Text = "키 매핑 수정";
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 m_bDirty = true;
@@ -725,7 +574,7 @@ namespace SharpKeys
             // Pop a mapping out of the list view
             if (lvKeys.SelectedItems.Count <= 0)
             {
-                MessageBox.Show("Please select a mapping to remove!", "SharpKeys");
+                MessageBox.Show("삭제할 키를 선택하세요!", "");
                 return;
             }
 
@@ -737,7 +586,7 @@ namespace SharpKeys
         private void DeleteAllMapping()
         {
             // Since removing all is a big step, get a confirmation
-            DialogResult dlgRes = MessageBox.Show("Deleting all will clear this list of key mapping but your registry will not be updated until you click \"Write to Registry\".\n\nDo you want to clear this list of key mappings?", "SharpKeys", MessageBoxButtons.YesNo, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
+            DialogResult dlgRes = MessageBox.Show("전부 삭제시 리스트는 지워지지만 \"레지스트리에 쓰기\"버튼을 클릭하기 전까지는 적용되지 않습니다..\n\n키 리스트를 초기화하시겠습니까?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
             if (dlgRes == DialogResult.No)
             {
                 return;
@@ -758,9 +607,9 @@ namespace SharpKeys
         private void btnLoadKeys_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "SharpKeys key list (*.skl)|*.SKL";
-            openFileDialog.Title = "Open SharpKey Key List";
-            openFileDialog.DefaultExt = "skl";
+            openFileDialog.Filter = "키 리스트 (*.kls)|*.KLS";
+            openFileDialog.Title = "키 리스트 불러오기";
+            openFileDialog.DefaultExt = "KLS";
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             openFileDialog.CheckPathExists = true;
             openFileDialog.RestoreDirectory = true;
@@ -784,12 +633,12 @@ namespace SharpKeys
                 }
                 catch
                 {
-                    MessageBox.Show("The file you are trying to load is not a valid SKL file!", "SharpKeys");
+                    MessageBox.Show("유효한 KLS파일이 아님!", "");
                 }
             }
             else
             {
-                MessageBox.Show("You've tried to open a file that is empty!", "SharpKeys");
+                MessageBox.Show("파일이 비어있음!", "");
             }
         }
 
@@ -797,18 +646,18 @@ namespace SharpKeys
         {
             if (lvKeys.Items.Count <= 0)
             {
-                MessageBox.Show("There are no remapped keys to save to a file!", "SharpKeys");
+                MessageBox.Show("저장할 키가 없음!", "");
             }
             SaveFileDialog saveDialog = new SaveFileDialog();
-            saveDialog.Filter = "SharpKeys key list (*.skl)|*.SKL";
-            saveDialog.Title = "Save SharpKeys Key List";
-            saveDialog.DefaultExt = "skl";
+            saveDialog.Filter = "키 리스트 (*.kls)|*.KLS";
+            saveDialog.Title = "키 리스트 저장";
+            saveDialog.DefaultExt = "kls";
             saveDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             saveDialog.CheckPathExists = true;
             saveDialog.RestoreDirectory = true;
             saveDialog.AddExtension = true;
             saveDialog.ShowHelp = false;
-            saveDialog.FileName = "My Keys.skl";
+            saveDialog.FileName = "*.kls";
             if (saveDialog.ShowDialog() == DialogResult.OK)
             {
                 // Grab the current bytes in the list
@@ -836,323 +685,303 @@ namespace SharpKeys
             // is pretty obvious.  There is a bit of a reverse lookup however, so labels changed here
             // need to be changed in a couple of other places
             m_hashKeys = new Hashtable();
-            m_hashKeys.Add("00_00", "-- Turn Key Off");
-            m_hashKeys.Add("00_01", "Special: Escape");
-            m_hashKeys.Add("00_02", "Key: 1 !");
-            m_hashKeys.Add("00_03", "Key: 2 @");
-            m_hashKeys.Add("00_04", "Key: 3 #");
-            m_hashKeys.Add("00_05", "Key: 4 $");
-            m_hashKeys.Add("00_06", "Key: 5 %");
-            m_hashKeys.Add("00_07", "Key: 6 ^");
-            m_hashKeys.Add("00_08", "Key: 7 &");
-            m_hashKeys.Add("00_09", "Key: 8 *");
-            m_hashKeys.Add("00_0A", "Key: 9 (");
-            m_hashKeys.Add("00_0B", "Key: 0 )");
-            m_hashKeys.Add("00_0C", "Key: - _");
-            m_hashKeys.Add("00_0D", "Key: = +");
-            m_hashKeys.Add("00_0E", "Special: Backspace");
-            m_hashKeys.Add("00_0F", "Special: Tab");
-
-            m_hashKeys.Add("00_10", "Key: Q");
-            m_hashKeys.Add("00_11", "Key: W");
-            m_hashKeys.Add("00_12", "Key: E");
-            m_hashKeys.Add("00_13", "Key: R");
-            m_hashKeys.Add("00_14", "Key: T");
-            m_hashKeys.Add("00_15", "Key: Y");
-            m_hashKeys.Add("00_16", "Key: U");
-            m_hashKeys.Add("00_17", "Key: I");
-            m_hashKeys.Add("00_18", "Key: O");
-            m_hashKeys.Add("00_19", "Key: P");
-            m_hashKeys.Add("00_1A", "Key: [ {");
-            m_hashKeys.Add("00_1B", "Key: ] }");
-            m_hashKeys.Add("00_1C", "Special: Enter");
-            m_hashKeys.Add("00_1D", "Special: Left Ctrl");
-            m_hashKeys.Add("00_1E", "Key: A");
-            m_hashKeys.Add("00_1F", "Key: S");
-
-            m_hashKeys.Add("00_20", "Key: D");
-            m_hashKeys.Add("00_21", "Key: F");
-            m_hashKeys.Add("00_22", "Key: G");
-            m_hashKeys.Add("00_23", "Key: H");
-            m_hashKeys.Add("00_24", "Key: J");
-            m_hashKeys.Add("00_25", "Key: K");
-            m_hashKeys.Add("00_26", "Key: L");
-            m_hashKeys.Add("00_27", "Key: ; :");
-            m_hashKeys.Add("00_28", "Key: ' \"");
-            m_hashKeys.Add("00_29", "Key: ` ~");
-            m_hashKeys.Add("00_2A", "Special: Left Shift");
-            m_hashKeys.Add("00_2B", "Key: \\ |");
-            m_hashKeys.Add("00_2C", "Key: Z");
-            m_hashKeys.Add("00_2D", "Key: X");
-            m_hashKeys.Add("00_2E", "Key: C");
-            m_hashKeys.Add("00_2F", "Key: V");
-
-            m_hashKeys.Add("00_30", "Key: B");
-            m_hashKeys.Add("00_31", "Key: N");
-            m_hashKeys.Add("00_32", "Key: M");
-            m_hashKeys.Add("00_33", "Key: , <");
-            m_hashKeys.Add("00_34", "Key: . >");
-            m_hashKeys.Add("00_35", "Key: / ?");
-            m_hashKeys.Add("00_36", "Special: Right Shift");
-            m_hashKeys.Add("00_37", "Num: *");
-            m_hashKeys.Add("00_38", "Special: Left Alt");
-            m_hashKeys.Add("00_39", "Special: Space");
-            m_hashKeys.Add("00_3A", "Special: Caps Lock");
-            m_hashKeys.Add("00_3B", "Function: F1");
-            m_hashKeys.Add("00_3C", "Function: F2");
-            m_hashKeys.Add("00_3D", "Function: F3");
-            m_hashKeys.Add("00_3E", "Function: F4");
-            m_hashKeys.Add("00_3F", "Function: F5");
-
-            m_hashKeys.Add("00_40", "Function: F6");
-            m_hashKeys.Add("00_41", "Function: F7");
-            m_hashKeys.Add("00_42", "Function: F8");
-            m_hashKeys.Add("00_43", "Function: F9");
-            m_hashKeys.Add("00_44", "Function: F10");
-            m_hashKeys.Add("00_45", "Special: Num Lock");
-            m_hashKeys.Add("00_46", "Special: Scroll Lock");
-            m_hashKeys.Add("00_47", "Num: 7");
-            m_hashKeys.Add("00_48", "Num: 8");
-            m_hashKeys.Add("00_49", "Num: 9");
-            m_hashKeys.Add("00_4A", "Num: -");
-            m_hashKeys.Add("00_4B", "Num: 4");
-            m_hashKeys.Add("00_4C", "Num: 5");
-            m_hashKeys.Add("00_4D", "Num: 6");
-            m_hashKeys.Add("00_4E", "Num: +");
-            m_hashKeys.Add("00_4F", "Num: 1");
-
-            m_hashKeys.Add("00_50", "Num: 2");
-            m_hashKeys.Add("00_51", "Num: 3");
-            m_hashKeys.Add("00_52", "Num: 0");
-            m_hashKeys.Add("00_53", "Num: .");
-            m_hashKeys.Add("00_54", "Unknown: 0x0054");
-            m_hashKeys.Add("00_55", "Unknown: 0x0055");
-            m_hashKeys.Add("00_56", "Special: ISO extra key");
-            m_hashKeys.Add("00_57", "Function: F11");
-            m_hashKeys.Add("00_58", "Function: F12");
-            m_hashKeys.Add("00_59", "Unknown: 0x0059");
-            m_hashKeys.Add("00_5A", "Unknown: 0x005A");
-            m_hashKeys.Add("00_5B", "Unknown: 0x005B");
-            m_hashKeys.Add("00_5C", "Unknown: 0x005C");
-            m_hashKeys.Add("00_5D", "Unknown: 0x005D");
-            m_hashKeys.Add("00_5E", "Unknown: 0x005E");
-            m_hashKeys.Add("00_5F", "Unknown: 0x005F");
-
-            m_hashKeys.Add("00_60", "Unknown: 0x0060");
-            m_hashKeys.Add("00_61", "Unknown: 0x0061");
-            m_hashKeys.Add("00_62", "Unknown: 0x0062");
-            m_hashKeys.Add("00_63", "Unknown: 0x0063");
-            m_hashKeys.Add("00_64", "Function: F13");
-            m_hashKeys.Add("00_65", "Function: F14");
-            m_hashKeys.Add("00_66", "Function: F15");
-            m_hashKeys.Add("00_67", "Function: F16");   // Mac keyboard 
-            m_hashKeys.Add("00_68", "Function: F17");   // Mac keyboard
-            m_hashKeys.Add("00_69", "Function: F18");   // Mac keyboard
-            m_hashKeys.Add("00_6A", "Function: F19");   // Mac keyboard
-            m_hashKeys.Add("00_6B", "Function: F20");   // IBM Model F 122-keys
-            m_hashKeys.Add("00_6C", "Function: F21");   // IBM Model F 122-keys
-            m_hashKeys.Add("00_6D", "Function: F22");   // IBM Model F 122-keys
-            m_hashKeys.Add("00_6E", "Function: F23");   // IBM Model F 122-keys
-            m_hashKeys.Add("00_6F", "Function: F24");   // IBM Model F 122-keys
-
-            m_hashKeys.Add("00_70", "Unknown: 0x0070");
-            m_hashKeys.Add("00_71", "Unknown: 0x0071");
-            m_hashKeys.Add("00_72", "Unknown: 0x0072");
-            m_hashKeys.Add("00_73", "Unknown: 0x0073");
-            m_hashKeys.Add("00_74", "Unknown: 0x0074");
-            m_hashKeys.Add("00_75", "Unknown: 0x0075");
-            m_hashKeys.Add("00_76", "Unknown: 0x0076");
-            m_hashKeys.Add("00_77", "Unknown: 0x0077");
-            m_hashKeys.Add("00_78", "Unknown: 0x0078");
-            m_hashKeys.Add("00_79", "Special: Henkan");
-            m_hashKeys.Add("00_7A", "Unknown: 0x007A");
-            m_hashKeys.Add("00_7B", "Special: Muhenkan");
-            m_hashKeys.Add("00_7C", "Unknown: 0x007C");
-            m_hashKeys.Add("00_7D", "Special: ¥ -");
-            m_hashKeys.Add("00_7E", "Unknown: 0x007E");
-            m_hashKeys.Add("00_7F", "Unknown: 0x007F");
-
-            m_hashKeys.Add("E0_01", "Unknown: 0xE001");
-            m_hashKeys.Add("E0_02", "Unknown: 0xE002");
-            m_hashKeys.Add("E0_03", "Unknown: 0xE003");
-            m_hashKeys.Add("E0_04", "Unknown: 0xE004");
-            m_hashKeys.Add("E0_05", "Unknown: 0xE005");
-            m_hashKeys.Add("E0_06", "Unknown: 0xE006");
-            m_hashKeys.Add("E0_07", "F-Lock: Redo");
-            m_hashKeys.Add("E0_08", "F-Lock: Undo");
-            m_hashKeys.Add("E0_09", "Unknown: 0xE009");
-            m_hashKeys.Add("E0_0A", "Unknown: 0xE00A");
-            m_hashKeys.Add("E0_0B", "Unknown: 0xE00B");
-            m_hashKeys.Add("E0_0C", "Unknown: 0xE00C");
-            m_hashKeys.Add("E0_0D", "Unknown: 0xE00D");
-            m_hashKeys.Add("E0_0E", "Unknown: 0xE00E");
-            m_hashKeys.Add("E0_0F", "Unknown: 0xE00F");
-
-            m_hashKeys.Add("E0_10", "Media: Prev Track");
-            m_hashKeys.Add("E0_11", "App: Messenger");
-            m_hashKeys.Add("E0_12", "Logitech: Webcam");
-            m_hashKeys.Add("E0_13", "Logitech: iTouch");
-            m_hashKeys.Add("E0_14", "Logitech: Shopping");
-            m_hashKeys.Add("E0_15", "Unknown: 0xE015");
-            m_hashKeys.Add("E0_16", "Unknown: 0xE016");
-            m_hashKeys.Add("E0_17", "Unknown: 0xE017");
-            m_hashKeys.Add("E0_18", "Unknown: 0xE018");
-            m_hashKeys.Add("E0_19", "Media: Next Track");
-            m_hashKeys.Add("E0_1A", "Unknown: 0xE01A");
-            m_hashKeys.Add("E0_1B", "Unknown: 0xE01B");
-            m_hashKeys.Add("E0_1C", "Num: Enter");
-            m_hashKeys.Add("E0_1D", "Special: Right Ctrl");
-            m_hashKeys.Add("E0_1E", "Unknown: 0xE01E");
-            m_hashKeys.Add("E0_1F", "Unknown: 0xE01F");
-
-            m_hashKeys.Add("E0_20", "Media: Mute");
-            m_hashKeys.Add("E0_2038", "Special: Alt Gr");
-            m_hashKeys.Add("E0_21", "App: Calculator");
-            m_hashKeys.Add("E0_22", "Media: Play/Pause");
-            m_hashKeys.Add("E0_23", "F-Lock: Spell");
-            m_hashKeys.Add("E0_24", "Media: Stop");
-            m_hashKeys.Add("E0_25", "Unknown: 0xE025");
-            m_hashKeys.Add("E0_26", "Unknown: 0xE026");
-            m_hashKeys.Add("E0_27", "Unknown: 0xE027");
-            m_hashKeys.Add("E0_28", "Unknown: 0xE028");
-            m_hashKeys.Add("E0_29", "Unknown: 0xE029");
-            m_hashKeys.Add("E0_2A", "Unknown: 0xE02A");
-            m_hashKeys.Add("E0_2B", "Unknown: 0xE02B");
-            m_hashKeys.Add("E0_2C", "Unknown: 0xE02C");
-            m_hashKeys.Add("E0_2D", "Unknown: 0xE02D");
-            m_hashKeys.Add("E0_2E", "Media: Volume Down");
-            m_hashKeys.Add("E0_2F", "Unknown: 0xE02F");
-
-            m_hashKeys.Add("E0_30", "Media: Volume Up");
-            m_hashKeys.Add("E0_31", "Unknown: 0xE031");
-            m_hashKeys.Add("E0_32", "Web: Home");
-            m_hashKeys.Add("E0_33", "Unknown: 0xE033");
-            m_hashKeys.Add("E0_34", "Unknown: 0xE034");
-            m_hashKeys.Add("E0_35", "Num: /");
-            m_hashKeys.Add("E0_36", "Unknown: 0xE036");
-            m_hashKeys.Add("E0_37", "Special: PrtSc");
-            m_hashKeys.Add("E0_38", "Special: Right Alt");
-            m_hashKeys.Add("E0_39", "Unknown: 0xE039");
-            m_hashKeys.Add("E0_3A", "Unknown: 0xE03A");
-            m_hashKeys.Add("E0_3B", "F-Lock: Help");
-            m_hashKeys.Add("E0_3C", "F-Lock: Office Home");
-            m_hashKeys.Add("E0_3D", "F-Lock: Task Pane");
-            m_hashKeys.Add("E0_3E", "F-Lock: New");
-            m_hashKeys.Add("E0_3F", "F-Lock: Open");
-
-            m_hashKeys.Add("E0_40", "F-Lock: Close");
-            m_hashKeys.Add("E0_41", "F-Lock: Reply");
-            m_hashKeys.Add("E0_42", "F-Lock: Fwd");
-            m_hashKeys.Add("E0_43", "F-Lock: Send");
-            m_hashKeys.Add("E0_44", "Unknown: 0xE044");
-            m_hashKeys.Add("E0_45", "Special: €");
-            m_hashKeys.Add("E0_46", "Special: Break");
-            m_hashKeys.Add("E0_47", "Special: Home");
-            m_hashKeys.Add("E0_48", "Arrow: Up");
-            m_hashKeys.Add("E0_49", "Special: Page Up");
-            m_hashKeys.Add("E0_4A", "Unknown: 0xE04A");
-            m_hashKeys.Add("E0_4B", "Arrow: Left");
-            m_hashKeys.Add("E0_4C", "Unknown: 0xE04C");
-            m_hashKeys.Add("E0_4D", "Arrow: Right");
-            m_hashKeys.Add("E0_4E", "Unknown: 0xE04E");
-            m_hashKeys.Add("E0_4F", "Special: End");
-
-            m_hashKeys.Add("E0_50", "Arrow: Down");
-            m_hashKeys.Add("E0_51", "Special: Page Down");
-            m_hashKeys.Add("E0_52", "Special: Insert");
-            m_hashKeys.Add("E0_53", "Special: Delete");
-            m_hashKeys.Add("E0_54", "Unknown: 0xE054");
-            m_hashKeys.Add("E0_55", "Unknown: 0xE055");
-            m_hashKeys.Add("E0_56", "Special: < > |");
-            m_hashKeys.Add("E0_57", "F-Lock: Save");
-            m_hashKeys.Add("E0_58", "F-Lock: Print");
-            m_hashKeys.Add("E0_59", "Unknown: 0xE059");
-            m_hashKeys.Add("E0_5A", "Unknown: 0xE05A");
-            m_hashKeys.Add("E0_5B", "Special: Left Windows");
-            m_hashKeys.Add("E0_5C", "Special: Right Windows");
-            m_hashKeys.Add("E0_5D", "Special: Application");
-            m_hashKeys.Add("E0_5E", "Special: Power");
-            m_hashKeys.Add("E0_5F", "Special: Sleep");
-
-            m_hashKeys.Add("E0_60", "Unknown: 0xE060");
-            m_hashKeys.Add("E0_61", "Unknown: 0xE061");
-            m_hashKeys.Add("E0_62", "Unknown: 0xE062");
-            m_hashKeys.Add("E0_63", "Special: Wake (or Fn)");
-            m_hashKeys.Add("E0_64", "Unknown: 0xE064");
-            m_hashKeys.Add("E0_65", "Web: Search");
-            m_hashKeys.Add("E0_66", "Web: Favorites");
-            m_hashKeys.Add("E0_67", "Web: Refresh");
-            m_hashKeys.Add("E0_68", "Web: Stop");
-            m_hashKeys.Add("E0_69", "Web: Forward");
-            m_hashKeys.Add("E0_6A", "Web: Back");
-            m_hashKeys.Add("E0_6B", "App: My Computer");
-            m_hashKeys.Add("E0_6C", "App: Mail");
-            m_hashKeys.Add("E0_6D", "App: Media Select");
-            m_hashKeys.Add("E0_6E", "Unknown: 0xE06E");
-            m_hashKeys.Add("E0_6F", "Unknown: 0xE06F");
-
-            m_hashKeys.Add("E0_70", "Unknown: 0xE070");
-            m_hashKeys.Add("E0_71", "Unknown: 0xE071");
-            m_hashKeys.Add("E0_72", "Unknown: 0xE072");
-            m_hashKeys.Add("E0_73", "Unknown: 0xE073");
-            m_hashKeys.Add("E0_74", "Unknown: 0xE074");
-            m_hashKeys.Add("E0_75", "Unknown: 0xE075");
-            m_hashKeys.Add("E0_76", "Unknown: 0xE076");
-            m_hashKeys.Add("E0_77", "Unknown: 0xE077");
-            m_hashKeys.Add("E0_78", "Unknown: 0xE078");
-            m_hashKeys.Add("E0_79", "Unknown: 0xE079");
-            m_hashKeys.Add("E0_7A", "Unknown: 0xE07A");
-            m_hashKeys.Add("E0_7B", "Unknown: 0xE07B");
-            m_hashKeys.Add("E0_7C", "Unknown: 0xE07C");
-            m_hashKeys.Add("E0_7D", "Unknown: 0xE07D");
-            m_hashKeys.Add("E0_7E", "Unknown: 0xE07E");
-            m_hashKeys.Add("E0_7F", "Unknown: 0xE07F");
-
-            m_hashKeys.Add("E0_A4", "Unknown: 0xE0A4"); // Possibly Left MENU key
-            m_hashKeys.Add("E0_A5", "Unknown: 0xE0A5"); // Possibly Right MENU key
-            m_hashKeys.Add("E0_A6", "Unknown: 0xE0A6"); // Possibly Browser Back key
-            m_hashKeys.Add("E0_A7", "Unknown: 0xE0A7"); // Possibly Browser Forward key
-            m_hashKeys.Add("E0_A8", "Unknown: 0xE0A8"); // Possibly Browser Refresh key
-            m_hashKeys.Add("E0_A9", "Unknown: 0xE0A9"); // Possibly Browser Stop key
-            m_hashKeys.Add("E0_AA", "Unknown: 0xE0AA"); // Possibly Browser Search key
-            m_hashKeys.Add("E0_AB", "Unknown: 0xE0AB"); // Possibly Browser Favorites key
-            m_hashKeys.Add("E0_AC", "Unknown: 0xE0AC"); // Possibly Browser Start and Home key
-            m_hashKeys.Add("E0_AD", "Unknown: 0xE0AD"); // Possibly Volume Mute key
-            m_hashKeys.Add("E0_AE", "Unknown: 0xE0AE"); // Possibly Volume Down key
-            m_hashKeys.Add("E0_AF", "Unknown: 0xE0AF"); // Possibly Volume Up key
-
-            m_hashKeys.Add("E0_B0", "Unknown: 0xE0B0"); // Media: Next track (alternate)
-            m_hashKeys.Add("E0_B1", "Unknown: 0xE0B1"); // Media: Previous track (alternate)
-            m_hashKeys.Add("E0_B2", "Unknown: 0xE0B2"); // Media: Stop (alternate)
-            m_hashKeys.Add("E0_B3", "Unknown: 0xE0B3"); // Media: Play/Pause (alternate)
-            m_hashKeys.Add("E0_B4", "Unknown: 0xE0B4"); // App: Mail (alternate)
-            m_hashKeys.Add("E0_B5", "Unknown: 0xE0B5"); // App: Select Media key
-            m_hashKeys.Add("E0_B6", "Unknown: 0xE0B6"); // Start Application 1 key
-            m_hashKeys.Add("E0_B7", "Unknown: 0xE0B7"); // Start Application 2 key
-            m_hashKeys.Add("E0_B8", "Unknown: 0xE0B8"); // Reserved
-            m_hashKeys.Add("E0_B9", "Unknown: 0xE0B9"); // Reserved
-            m_hashKeys.Add("E0_BA", "Unknown: 0xE0BA"); // Used for miscellaneous characters; it can vary by keyboard.
-            m_hashKeys.Add("E0_BB", "Unknown: 0xE0BB"); // For any country/region, the '+' key
-            m_hashKeys.Add("E0_BC", "Unknown: 0xE0BC"); // For any country/region, the ',' key
-            m_hashKeys.Add("E0_BD", "Unknown: 0xE0BD"); // For any country/region, the '-' key
-            m_hashKeys.Add("E0_BE", "Unknown: 0xE0BE"); // For any country/region, the '.' key
-            m_hashKeys.Add("E0_BF", "Unknown: 0xE0BF"); // Varies by keyboard
-
-            m_hashKeys.Add("E0_C0", "Unknown: 0xE0C0"); // Unknown key
-
-            m_hashKeys.Add("E0_DB", "Unknown: 0xE0BB"); // Varies by keyboard
-            m_hashKeys.Add("E0_DC", "Unknown: 0xE0BC"); // Varies by keyboard
-            m_hashKeys.Add("E0_DD", "Unknown: 0xE0BD"); // Varies by keyboard
-            m_hashKeys.Add("E0_DE", "Unknown: 0xE0BE"); // Varies by keyboard
-            m_hashKeys.Add("E0_DF", "Unknown: 0xE0BF"); // Varies by keyboard
-
-            m_hashKeys.Add("E0_E1", "Unknown: 0xE0B1"); // Varies by keyboard
-            m_hashKeys.Add("E0_E2", "Unknown: 0xE0B2"); // Varies by keyboard
-            m_hashKeys.Add("E0_E3", "Unknown: 0xE0B3"); // Varies by keyboard
-            m_hashKeys.Add("E0_E4", "Unknown: 0xE0B4"); // Varies by keyboard
-                                                        
-            m_hashKeys.Add("E0_F1", "Special: Hanja Key");
-            m_hashKeys.Add("E0_F2", "Special: Hangul Key");
+            m_hashKeys.Add("E1_1D", "특수: Pause/Break");
+            m_hashKeys.Add("00_00", "-- 키 없음");
+            m_hashKeys.Add("00_01", "특수: ESC");
+            m_hashKeys.Add("00_02", "키: 1 !");
+            m_hashKeys.Add("00_03", "키: 2 @");
+            m_hashKeys.Add("00_04", "키: 3 #");
+            m_hashKeys.Add("00_05", "키: 4 $");
+            m_hashKeys.Add("00_06", "키: 5 %");
+            m_hashKeys.Add("00_07", "키: 6 ^");
+            m_hashKeys.Add("00_08", "키: 7 &");
+            m_hashKeys.Add("00_09", "키: 8 *");
+            m_hashKeys.Add("00_0A", "키: 9 (");
+            m_hashKeys.Add("00_0B", "키: 0 )");
+            m_hashKeys.Add("00_0C", "키: - _");
+            m_hashKeys.Add("00_0D", "키: = +");
+            m_hashKeys.Add("00_0E", "특수: 백스페이스");
+            m_hashKeys.Add("00_0F", "특수: 탭");
+            m_hashKeys.Add("00_10", "키: Q");
+            m_hashKeys.Add("00_11", "키: W");
+            m_hashKeys.Add("00_12", "키: E");
+            m_hashKeys.Add("00_13", "키: R");
+            m_hashKeys.Add("00_14", "키: T");
+            m_hashKeys.Add("00_15", "키: Y");
+            m_hashKeys.Add("00_16", "키: U");
+            m_hashKeys.Add("00_17", "키: I");
+            m_hashKeys.Add("00_18", "키: O");
+            m_hashKeys.Add("00_19", "키: P");
+            m_hashKeys.Add("00_1A", "키: [ {");
+            m_hashKeys.Add("00_1B", "키: ] }");
+            m_hashKeys.Add("00_1C", "특수: 엔터");
+            m_hashKeys.Add("00_1D", "특수: 왼쪽 컨트롤");
+            m_hashKeys.Add("00_1E", "키: A");
+            m_hashKeys.Add("00_1F", "키: S");
+            m_hashKeys.Add("00_20", "키: D");
+            m_hashKeys.Add("00_21", "키: F");
+            m_hashKeys.Add("00_22", "키: G");
+            m_hashKeys.Add("00_23", "키: H");
+            m_hashKeys.Add("00_24", "키: J");
+            m_hashKeys.Add("00_25", "키: K");
+            m_hashKeys.Add("00_26", "키: L");
+            m_hashKeys.Add("00_27", "키: ; :");
+            m_hashKeys.Add("00_28", "키: ' \"");
+            m_hashKeys.Add("00_29", "키: ` ~");
+            m_hashKeys.Add("00_2A", "특수: 왼쪽 쉬프트");
+            m_hashKeys.Add("00_2B", "키: \\ |");
+            m_hashKeys.Add("00_2C", "키: Z");
+            m_hashKeys.Add("00_2D", "키: X");
+            m_hashKeys.Add("00_2E", "키: C");
+            m_hashKeys.Add("00_2F", "키: V");
+            m_hashKeys.Add("00_30", "키: B");
+            m_hashKeys.Add("00_31", "키: N");
+            m_hashKeys.Add("00_32", "키: M");
+            m_hashKeys.Add("00_33", "키: , <");
+            m_hashKeys.Add("00_34", "키: . >");
+            m_hashKeys.Add("00_35", "키: / ?");
+            m_hashKeys.Add("00_36", "특수: 오른쪽 쉬프트");
+            m_hashKeys.Add("00_37", "숫자 패드: *");
+            m_hashKeys.Add("00_38", "특수: 왼쪽 알트");
+            m_hashKeys.Add("00_39", "특수: 스페이스");
+            m_hashKeys.Add("00_3A", "특수: 캡스 락");
+            m_hashKeys.Add("00_3B", "기능: F1");
+            m_hashKeys.Add("00_3C", "기능: F2");
+            m_hashKeys.Add("00_3D", "기능: F3");
+            m_hashKeys.Add("00_3E", "기능: F4");
+            m_hashKeys.Add("00_3F", "기능: F5");
+            m_hashKeys.Add("00_40", "기능: F6");
+            m_hashKeys.Add("00_41", "기능: F7");
+            m_hashKeys.Add("00_42", "기능: F8");
+            m_hashKeys.Add("00_43", "기능: F9");
+            m_hashKeys.Add("00_44", "기능: F10");
+            m_hashKeys.Add("00_45", "특수: 넘버 락");
+            m_hashKeys.Add("00_46", "특수: 스크롤 락");
+            m_hashKeys.Add("00_47", "숫자 패드: 7");
+            m_hashKeys.Add("00_48", "숫자 패드: 8");
+            m_hashKeys.Add("00_49", "숫자 패드: 9");
+            m_hashKeys.Add("00_4A", "숫자 패드: -");
+            m_hashKeys.Add("00_4B", "숫자 패드: 4");
+            m_hashKeys.Add("00_4C", "숫자 패드: 5");
+            m_hashKeys.Add("00_4D", "숫자 패드: 6");
+            m_hashKeys.Add("00_4E", "숫자 패드: +");
+            m_hashKeys.Add("00_4F", "숫자 패드: 1");
+            m_hashKeys.Add("00_50", "숫자 패드: 2");
+            m_hashKeys.Add("00_51", "숫자 패드: 3");
+            m_hashKeys.Add("00_52", "숫자 패드: 0");
+            m_hashKeys.Add("00_53", "숫자 패드: .");
+            m_hashKeys.Add("00_54", "알 수 없는: 0x0054");
+            m_hashKeys.Add("00_55", "알 수 없는: 0x0055");
+            m_hashKeys.Add("00_56", "특수: ISO 추가 키");
+            m_hashKeys.Add("00_57", "기능: F11");
+            m_hashKeys.Add("00_58", "기능: F12");
+            m_hashKeys.Add("00_59", "알 수 없는: 0x0059");
+            m_hashKeys.Add("00_5A", "알 수 없는: 0x005A");
+            m_hashKeys.Add("00_5B", "알 수 없는: 0x005B");
+            m_hashKeys.Add("00_5C", "알 수 없는: 0x005C");
+            m_hashKeys.Add("00_5D", "알 수 없는: 0x005D");
+            m_hashKeys.Add("00_5E", "알 수 없는: 0x005E");
+            m_hashKeys.Add("00_5F", "알 수 없는: 0x005F");
+            m_hashKeys.Add("00_60", "알 수 없는: 0x0060");
+            m_hashKeys.Add("00_61", "알 수 없는: 0x0061");
+            m_hashKeys.Add("00_62", "알 수 없는: 0x0062");
+            m_hashKeys.Add("00_63", "알 수 없는: 0x0063");
+            m_hashKeys.Add("00_64", "기능: F13");
+            m_hashKeys.Add("00_65", "기능: F14");
+            m_hashKeys.Add("00_66", "기능: F15");
+            m_hashKeys.Add("00_67", "기능: F16");   // Mac keyboard 
+            m_hashKeys.Add("00_68", "기능: F17");   // Mac keyboard
+            m_hashKeys.Add("00_69", "기능: F18");   // Mac keyboard
+            m_hashKeys.Add("00_6A", "기능: F19");   // Mac keyboard
+            m_hashKeys.Add("00_6B", "기능: F20");   // IBM Model F 122-keys
+            m_hashKeys.Add("00_6C", "기능: F21");   // IBM Model F 122-keys
+            m_hashKeys.Add("00_6D", "기능: F22");   // IBM Model F 122-keys
+            m_hashKeys.Add("00_6E", "기능: F23");   // IBM Model F 122-keys
+            m_hashKeys.Add("00_6F", "기능: F24");   // IBM Model F 122-keys
+            m_hashKeys.Add("00_70", "알 수 없는: 0x0070");
+            m_hashKeys.Add("00_71", "알 수 없는: 0x0071");
+            m_hashKeys.Add("00_72", "알 수 없는: 0x0072");
+            m_hashKeys.Add("00_73", "알 수 없는: 0x0073");
+            m_hashKeys.Add("00_74", "알 수 없는: 0x0074");
+            m_hashKeys.Add("00_75", "알 수 없는: 0x0075");
+            m_hashKeys.Add("00_76", "알 수 없는: 0x0076");
+            m_hashKeys.Add("00_77", "알 수 없는: 0x0077");
+            m_hashKeys.Add("00_78", "알 수 없는: 0x0078");
+            m_hashKeys.Add("00_79", "특수: Henkan(변환)");
+            m_hashKeys.Add("00_7A", "알 수 없는: 0x007A");
+            m_hashKeys.Add("00_7B", "특수: Muhenkan(무변환)");
+            m_hashKeys.Add("00_7C", "알 수 없는: 0x007C");
+            m_hashKeys.Add("00_7D", "특수: ¥ -");
+            m_hashKeys.Add("00_7E", "알 수 없는: 0x007E");
+            m_hashKeys.Add("00_7F", "알 수 없는: 0x007F");
+            m_hashKeys.Add("E0_01", "알 수 없는: 0xE001");
+            m_hashKeys.Add("E0_02", "알 수 없는: 0xE002");
+            m_hashKeys.Add("E0_03", "알 수 없는: 0xE003");
+            m_hashKeys.Add("E0_04", "알 수 없는: 0xE004");
+            m_hashKeys.Add("E0_05", "알 수 없는: 0xE005");
+            m_hashKeys.Add("E0_06", "알 수 없는: 0xE006");
+            m_hashKeys.Add("E0_07", "기능키 잠금(F-Lock): 다시 실행");
+            m_hashKeys.Add("E0_08", "기능키 잠금(F-Lock): 실행 취소");
+            m_hashKeys.Add("E0_09", "알 수 없는: 0xE009");
+            m_hashKeys.Add("E0_0A", "알 수 없는: 0xE00A");
+            m_hashKeys.Add("E0_0B", "알 수 없는: 0xE00B");
+            m_hashKeys.Add("E0_0C", "알 수 없는: 0xE00C");
+            m_hashKeys.Add("E0_0D", "알 수 없는: 0xE00D");
+            m_hashKeys.Add("E0_0E", "알 수 없는: 0xE00E");
+            m_hashKeys.Add("E0_0F", "알 수 없는: 0xE00F");
+            m_hashKeys.Add("E0_10", "미디어: 이전 트랙");
+            m_hashKeys.Add("E0_11", "앱: 메신저");
+            m_hashKeys.Add("E0_12", "로지텍: 웹캠");
+            m_hashKeys.Add("E0_13", "로지텍: iTouch");
+            m_hashKeys.Add("E0_14", "로지텍: 쇼핑");
+            m_hashKeys.Add("E0_15", "알 수 없는: 0xE015");
+            m_hashKeys.Add("E0_16", "알 수 없는: 0xE016");
+            m_hashKeys.Add("E0_17", "알 수 없는: 0xE017");
+            m_hashKeys.Add("E0_18", "알 수 없는: 0xE018");
+            m_hashKeys.Add("E0_19", "미디어: 다음 트랙");
+            m_hashKeys.Add("E0_1A", "알 수 없는: 0xE01A");
+            m_hashKeys.Add("E0_1B", "알 수 없는: 0xE01B");
+            m_hashKeys.Add("E0_1C", "숫자 패드: 엔터");
+            m_hashKeys.Add("E0_1D", "특수: 오른쪽 컨트롤");
+            m_hashKeys.Add("E0_1E", "알 수 없는: 0xE01E");
+            m_hashKeys.Add("E0_1F", "알 수 없는: 0xE01F");
+            m_hashKeys.Add("E0_20", "미디어: 음소거");
+            m_hashKeys.Add("E0_2038", "특수: Alt Gr");
+            m_hashKeys.Add("E0_21", "앱: 계산기");
+            m_hashKeys.Add("E0_22", "미디어: 재생/일시정지");
+            m_hashKeys.Add("E0_23", "기능키 잠금(F-Lock): Spell");
+            m_hashKeys.Add("E0_24", "미디어: 정지");
+            m_hashKeys.Add("E0_25", "알 수 없는: 0xE025");
+            m_hashKeys.Add("E0_26", "알 수 없는: 0xE026");
+            m_hashKeys.Add("E0_27", "알 수 없는: 0xE027");
+            m_hashKeys.Add("E0_28", "알 수 없는: 0xE028");
+            m_hashKeys.Add("E0_29", "알 수 없는: 0xE029");
+            m_hashKeys.Add("E0_2A", "알 수 없는: 0xE02A");
+            m_hashKeys.Add("E0_2B", "알 수 없는: 0xE02B");
+            m_hashKeys.Add("E0_2C", "알 수 없는: 0xE02C");
+            m_hashKeys.Add("E0_2D", "알 수 없는: 0xE02D");
+            m_hashKeys.Add("E0_2E", "미디어: 볼륨 다운");
+            m_hashKeys.Add("E0_2F", "알 수 없는: 0xE02F");
+            m_hashKeys.Add("E0_30", "미디어: 볼륨 업");
+            m_hashKeys.Add("E0_31", "알 수 없는: 0xE031");
+            m_hashKeys.Add("E0_32", "웹: 홈페이지");
+            m_hashKeys.Add("E0_33", "알 수 없는: 0xE033");
+            m_hashKeys.Add("E0_34", "알 수 없는: 0xE034");
+            m_hashKeys.Add("E0_35", "숫자 패드: /");
+            m_hashKeys.Add("E0_36", "알 수 없는: 0xE036");
+            m_hashKeys.Add("E0_37", "특수: 프린트 스크린");
+            m_hashKeys.Add("E0_38", "특수: 오른쪽 알트");
+            m_hashKeys.Add("E0_39", "알 수 없는: 0xE039");
+            m_hashKeys.Add("E0_3A", "알 수 없는: 0xE03A");
+            m_hashKeys.Add("E0_3B", "기능키 잠금(F-Lock): 도움말");
+            m_hashKeys.Add("E0_3C", "기능키 잠금(F-Lock): Office Home");
+            m_hashKeys.Add("E0_3D", "기능키 잠금(F-Lock): Task Pane");
+            m_hashKeys.Add("E0_3E", "기능키 잠금(F-Lock): New");
+            m_hashKeys.Add("E0_3F", "기능키 잠금(F-Lock): 오픈");
+            m_hashKeys.Add("E0_40", "기능키 잠금(F-Lock): 닫기");
+            m_hashKeys.Add("E0_41", "기능키 잠금(F-Lock): 답장");
+            m_hashKeys.Add("E0_42", "기능키 잠금(F-Lock): Fwd");
+            m_hashKeys.Add("E0_43", "기능키 잠금(F-Lock): 전송");
+            m_hashKeys.Add("E0_44", "알 수 없는: 0xE044");
+            m_hashKeys.Add("E0_45", "특수: €");
+            m_hashKeys.Add("E0_46", "특수: Break");
+            m_hashKeys.Add("E0_47", "특수: 홈");
+            m_hashKeys.Add("E0_48", "방향: 위");
+            m_hashKeys.Add("E0_49", "특수: 페이지 업");
+            m_hashKeys.Add("E0_4A", "알 수 없는: 0xE04A");
+            m_hashKeys.Add("E0_4B", "방향: 왼쪽");
+            m_hashKeys.Add("E0_4C", "알 수 없는: 0xE04C");
+            m_hashKeys.Add("E0_4D", "방향: 오른쪽");
+            m_hashKeys.Add("E0_4E", "알 수 없는: 0xE04E");
+            m_hashKeys.Add("E0_4F", "특수: 끝");
+            m_hashKeys.Add("E0_50", "방향: 아래");
+            m_hashKeys.Add("E0_51", "특수: 페이지 다운");
+            m_hashKeys.Add("E0_52", "특수: 인서트");
+            m_hashKeys.Add("E0_53", "특수: 삭제");
+            m_hashKeys.Add("E0_54", "알 수 없는: 0xE054");
+            m_hashKeys.Add("E0_55", "알 수 없는: 0xE055");
+            m_hashKeys.Add("E0_56", "특수: < > |");
+            m_hashKeys.Add("E0_57", "기능키 잠금(F-Lock): 저장");
+            m_hashKeys.Add("E0_58", "기능키 잠금(F-Lock): 인쇄");
+            m_hashKeys.Add("E0_59", "알 수 없는: 0xE059");
+            m_hashKeys.Add("E0_5A", "알 수 없는: 0xE05A");
+            m_hashKeys.Add("E0_5B", "특수: 왼쪽 윈도우키");
+            m_hashKeys.Add("E0_5C", "특수: 오른쪽 윈도우키");
+            m_hashKeys.Add("E0_5D", "특수: 애플리케이션");
+            m_hashKeys.Add("E0_5E", "특수: 전원");
+            m_hashKeys.Add("E0_5F", "특수: 절전");
+            m_hashKeys.Add("E0_60", "알 수 없는: 0xE060");
+            m_hashKeys.Add("E0_61", "알 수 없는: 0xE061");
+            m_hashKeys.Add("E0_62", "알 수 없는: 0xE062");
+            m_hashKeys.Add("E0_63", "특수: 웨이크 (또는 Fn)");
+            m_hashKeys.Add("E0_64", "알 수 없는: 0xE064");
+            m_hashKeys.Add("E0_65", "웹: 검색");
+            m_hashKeys.Add("E0_66", "웹: 즐겨찾기");
+            m_hashKeys.Add("E0_67", "웹: 새로 고침");
+            m_hashKeys.Add("E0_68", "웹: 정지");
+            m_hashKeys.Add("E0_69", "웹: 앞으로");
+            m_hashKeys.Add("E0_6A", "웹: 뒤로");
+            m_hashKeys.Add("E0_6B", "앱: 내 컴퓨터");
+            m_hashKeys.Add("E0_6C", "앱: 메일");
+            m_hashKeys.Add("E0_6D", "앱: 미디어 선택");
+            m_hashKeys.Add("E0_6E", "알 수 없는: 0xE06E");
+            m_hashKeys.Add("E0_6F", "알 수 없는: 0xE06F");
+            m_hashKeys.Add("E0_70", "알 수 없는: 0xE070");
+            m_hashKeys.Add("E0_71", "알 수 없는: 0xE071");
+            m_hashKeys.Add("E0_72", "알 수 없는: 0xE072");
+            m_hashKeys.Add("E0_73", "알 수 없는: 0xE073");
+            m_hashKeys.Add("E0_74", "알 수 없는: 0xE074");
+            m_hashKeys.Add("E0_75", "알 수 없는: 0xE075");
+            m_hashKeys.Add("E0_76", "알 수 없는: 0xE076");
+            m_hashKeys.Add("E0_77", "알 수 없는: 0xE077");
+            m_hashKeys.Add("E0_78", "알 수 없는: 0xE078");
+            m_hashKeys.Add("E0_79", "알 수 없는: 0xE079");
+            m_hashKeys.Add("E0_7A", "알 수 없는: 0xE07A");
+            m_hashKeys.Add("E0_7B", "알 수 없는: 0xE07B");
+            m_hashKeys.Add("E0_7C", "알 수 없는: 0xE07C");
+            m_hashKeys.Add("E0_7D", "알 수 없는: 0xE07D");
+            m_hashKeys.Add("E0_7E", "알 수 없는: 0xE07E");
+            m_hashKeys.Add("E0_7F", "알 수 없는: 0xE07F");
+            m_hashKeys.Add("E0_A4", "알 수 없는: 0xE0A4"); // Possibly Left MENU key
+            m_hashKeys.Add("E0_A5", "알 수 없는: 0xE0A5"); // Possibly Right MENU key
+            m_hashKeys.Add("E0_A6", "알 수 없는: 0xE0A6"); // Possibly Browser Back key
+            m_hashKeys.Add("E0_A7", "알 수 없는: 0xE0A7"); // Possibly Browser Forward key
+            m_hashKeys.Add("E0_A8", "알 수 없는: 0xE0A8"); // Possibly Browser Refresh key
+            m_hashKeys.Add("E0_A9", "알 수 없는: 0xE0A9"); // Possibly Browser Stop key
+            m_hashKeys.Add("E0_AA", "알 수 없는: 0xE0AA"); // Possibly Browser Search key
+            m_hashKeys.Add("E0_AB", "알 수 없는: 0xE0AB"); // Possibly Browser Favorites key
+            m_hashKeys.Add("E0_AC", "알 수 없는: 0xE0AC"); // Possibly Browser Start and Home key
+            m_hashKeys.Add("E0_AD", "알 수 없는: 0xE0AD"); // Possibly Volume Mute key
+            m_hashKeys.Add("E0_AE", "알 수 없는: 0xE0AE"); // Possibly Volume Down key
+            m_hashKeys.Add("E0_AF", "알 수 없는: 0xE0AF"); // Possibly Volume Up key
+            m_hashKeys.Add("E0_B0", "알 수 없는: 0xE0B0"); // Media: Next track (alternate)
+            m_hashKeys.Add("E0_B1", "알 수 없는: 0xE0B1"); // Media: Previous track (alternate)
+            m_hashKeys.Add("E0_B2", "알 수 없는: 0xE0B2"); // Media: Stop (alternate)
+            m_hashKeys.Add("E0_B3", "알 수 없는: 0xE0B3"); // Media: Play/Pause (alternate)
+            m_hashKeys.Add("E0_B4", "알 수 없는: 0xE0B4"); // App: Mail (alternate)
+            m_hashKeys.Add("E0_B5", "알 수 없는: 0xE0B5"); // App: Select Media key
+            m_hashKeys.Add("E0_B6", "알 수 없는: 0xE0B6"); // Start Application 1 key
+            m_hashKeys.Add("E0_B7", "알 수 없는: 0xE0B7"); // Start Application 2 key
+            m_hashKeys.Add("E0_B8", "알 수 없는: 0xE0B8"); // Reserved
+            m_hashKeys.Add("E0_B9", "알 수 없는: 0xE0B9"); // Reserved
+            m_hashKeys.Add("E0_BA", "알 수 없는: 0xE0BA"); // Used for miscellaneous characters; it can vary by keyboard.
+            m_hashKeys.Add("E0_BB", "알 수 없는: 0xE0BB"); // For any country/region, the '+' key
+            m_hashKeys.Add("E0_BC", "알 수 없는: 0xE0BC"); // For any country/region, the ',' key
+            m_hashKeys.Add("E0_BD", "알 수 없는: 0xE0BD"); // For any country/region, the '-' key
+            m_hashKeys.Add("E0_BE", "알 수 없는: 0xE0BE"); // For any country/region, the '.' key
+            m_hashKeys.Add("E0_BF", "알 수 없는: 0xE0BF"); // Varies by keyboard
+            m_hashKeys.Add("E0_C0", "알 수 없는: 0xE0C0"); // Unknown key
+            m_hashKeys.Add("E0_DB", "알 수 없는: 0xE0BB"); // Varies by keyboard
+            m_hashKeys.Add("E0_DC", "알 수 없는: 0xE0BC"); // Varies by keyboard
+            m_hashKeys.Add("E0_DD", "알 수 없는: 0xE0BD"); // Varies by keyboard
+            m_hashKeys.Add("E0_DE", "알 수 없는: 0xE0BE"); // Varies by keyboard
+            m_hashKeys.Add("E0_DF", "알 수 없는: 0xE0BF"); // Varies by keyboard
+            m_hashKeys.Add("E0_E1", "알 수 없는: 0xE0B1"); // Varies by keyboard
+            m_hashKeys.Add("E0_E2", "알 수 없는: 0xE0B2"); // Varies by keyboard
+            m_hashKeys.Add("E0_E3", "알 수 없는: 0xE0B3"); // Varies by keyboard
+            m_hashKeys.Add("E0_E4", "알 수 없는: 0xE0B4"); // Varies by keyboard
+            m_hashKeys.Add("E0_F1", "특수: Hanja Key(한자 키)");
+            m_hashKeys.Add("E0_F2", "특수: Hangul Key(한글 키)");
         }
 
         // Dialog related events and overrides
@@ -1177,7 +1006,7 @@ namespace SharpKeys
             // if anything has been added, edit'd or delete'd, ask if a save to the registry should be performed
             if (m_bDirty)
             {
-                DialogResult dlgRes = MessageBox.Show("You have made changes to the list of key mappings.\n\nDo you want to update the registry now?", "SharpKeys", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button3);
+                DialogResult dlgRes = MessageBox.Show("변경사항이 있습니다.\n\n레지스트리에 쓰시겠습니까?", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button3);
                 if (dlgRes == DialogResult.Cancel)
                 {
                     e.Cancel = true;
@@ -1315,47 +1144,5 @@ namespace SharpKeys
             this.Invalidate();
         }
 
-        private void Dialog_Main_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics graphics = e.Graphics;
-
-            Rectangle rectangle = new Rectangle(0, 0, this.Width, this.Height);
-            LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rectangle,
-                           Color.FromArgb(188, 188, 188), Color.FromArgb(225, 225, 225),
-                           LinearGradientMode.ForwardDiagonal);
-
-            graphics.FillRectangle(linearGradientBrush, rectangle);
-        }
-
-        private void mainPanel_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics graphics = e.Graphics;
-
-            Rectangle rectangle = new Rectangle(0, 0, mainPanel.Width, mainPanel.Height);
-            LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rectangle,
-                           Color.FromArgb(209, 221, 228), Color.FromArgb(237, 239, 247), //Color.FromArgb(236, 241, 243), 
-                           LinearGradientMode.Vertical);
-
-            graphics.FillRectangle(linearGradientBrush, rectangle);
-        }
-
-        private void headerPanel_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics graphics = e.Graphics;
-
-            Rectangle topRectangle = new Rectangle(0, 0, headerPanel.Width, headerPanel.Height / 2);
-            Rectangle bottomRectangle = new Rectangle(0, topRectangle.Height, headerPanel.Width, headerPanel.Height - topRectangle.Height);
-            LinearGradientBrush topGradientBrush = new LinearGradientBrush(topRectangle,
-                           Color.FromArgb(165, 182, 206), Color.FromArgb(37, 81, 142),
-                           LinearGradientMode.Vertical);
-
-            LinearGradientBrush bottomGradientBrush = new LinearGradientBrush(bottomRectangle,
-                           Color.FromArgb(13, 37, 90), Color.FromArgb(39, 37, 160),
-                           LinearGradientMode.Vertical);
-
-            graphics.FillRectangle(topGradientBrush, topRectangle);
-            graphics.FillRectangle(bottomGradientBrush, bottomRectangle);
-
-        }
     }
 }

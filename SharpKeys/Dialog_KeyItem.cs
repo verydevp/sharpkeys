@@ -62,7 +62,6 @@ namespace SharpKeys
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dialog_KeyItem));
             this.lbFrom = new System.Windows.Forms.ListBox();
             this.btnFrom = new System.Windows.Forms.Button();
             this.btnTo = new System.Windows.Forms.Button();
@@ -80,87 +79,90 @@ namespace SharpKeys
             // lbFrom
             // 
             this.lbFrom.IntegralHeight = false;
-            this.lbFrom.Location = new System.Drawing.Point(9, 20);
+            this.lbFrom.ItemHeight = 12;
+            this.lbFrom.Location = new System.Drawing.Point(10, 18);
             this.lbFrom.Name = "lbFrom";
             this.lbFrom.ScrollAlwaysVisible = true;
-            this.lbFrom.Size = new System.Drawing.Size(230, 276);
+            this.lbFrom.Size = new System.Drawing.Size(268, 255);
             this.lbFrom.TabIndex = 0;
             // 
             // btnFrom
             // 
             this.btnFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFrom.Location = new System.Drawing.Point(164, 311);
+            this.btnFrom.Location = new System.Drawing.Point(191, 279);
             this.btnFrom.Name = "btnFrom";
-            this.btnFrom.Size = new System.Drawing.Size(75, 23);
+            this.btnFrom.Size = new System.Drawing.Size(87, 29);
             this.btnFrom.TabIndex = 1;
-            this.btnFrom.Text = "Type &Key";
+            this.btnFrom.Text = "키 입력";
             this.btnFrom.Click += new System.EventHandler(this.btnFrom_Click);
             // 
             // btnTo
             // 
             this.btnTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTo.Location = new System.Drawing.Point(164, 311);
+            this.btnTo.Location = new System.Drawing.Point(191, 279);
             this.btnTo.Name = "btnTo";
-            this.btnTo.Size = new System.Drawing.Size(75, 23);
+            this.btnTo.Size = new System.Drawing.Size(87, 29);
             this.btnTo.TabIndex = 0;
-            this.btnTo.Text = "Type K&ey";
+            this.btnTo.Text = "키 입력";
             this.btnTo.Click += new System.EventHandler(this.btnTo_Click);
             // 
             // lbTo
             // 
             this.lbTo.IntegralHeight = false;
-            this.lbTo.Location = new System.Drawing.Point(9, 20);
+            this.lbTo.ItemHeight = 12;
+            this.lbTo.Location = new System.Drawing.Point(10, 18);
             this.lbTo.Name = "lbTo";
             this.lbTo.ScrollAlwaysVisible = true;
-            this.lbTo.Size = new System.Drawing.Size(230, 276);
+            this.lbTo.Size = new System.Drawing.Size(268, 255);
             this.lbTo.TabIndex = 1;
             // 
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(367, 373);
+            this.btnOK.Location = new System.Drawing.Point(428, 339);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(87, 30);
             this.btnOK.TabIndex = 2;
-            this.btnOK.Text = "OK";
+            this.btnOK.Text = "확인";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnTo);
             this.groupBox2.Controls.Add(this.lbTo);
-            this.groupBox2.Location = new System.Drawing.Point(271, 12);
+            this.groupBox2.Location = new System.Drawing.Point(316, 11);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(251, 347);
+            this.groupBox2.Size = new System.Drawing.Size(293, 320);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "&To this key:";
+            this.groupBox2.Text = "이 키로 매핑:";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lbFrom);
             this.groupBox1.Controls.Add(this.btnFrom);
-            this.groupBox1.Location = new System.Drawing.Point(14, 12);
+            this.groupBox1.Location = new System.Drawing.Point(16, 11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(251, 347);
+            this.groupBox1.Size = new System.Drawing.Size(293, 320);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "&Map this key:";
+            this.groupBox1.Text = "매핑 할 키:";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // mainPanel
             // 
-            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mainPanel.BackColor = System.Drawing.Color.Transparent;
             this.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mainPanel.Controls.Add(this.groupBox1);
             this.mainPanel.Controls.Add(this.btnOK);
             this.mainPanel.Controls.Add(this.groupBox2);
             this.mainPanel.Controls.Add(this.btnCancel);
-            this.mainPanel.Location = new System.Drawing.Point(12, 12);
+            this.mainPanel.Location = new System.Drawing.Point(14, 11);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(537, 410);
+            this.mainPanel.Size = new System.Drawing.Size(626, 379);
             this.mainPanel.TabIndex = 4;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
@@ -168,24 +170,24 @@ namespace SharpKeys
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(447, 373);
+            this.btnCancel.Location = new System.Drawing.Point(521, 339);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(87, 30);
             this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "취소";
             // 
             // Dialog_KeyItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 434);
+            this.ClientSize = new System.Drawing.Size(654, 401);
             this.Controls.Add(this.mainPanel);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Dialog_KeyItem";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -211,7 +213,7 @@ namespace SharpKeys
                 else
                 {
                     // probably an international keyboard code
-                    MessageBox.Show("You've entered a key that SharpKeys doesn't know about.\n\nPlease check the SharpKeys website for an updated release", "SharpKeys");
+                    MessageBox.Show("알 수 없는 키가 입력되었습니다.", "");
                 }
             }
         }
@@ -228,7 +230,7 @@ namespace SharpKeys
                 else
                 {
                     // probably an international keyboard code
-                    MessageBox.Show("You've entered a key that SharpKeys doesn't know about.\n\nPlease check the SharpKeys website for an updated release", "SharpKeys");
+                    MessageBox.Show("알 수 없는 키가 입력되었습니다.", "");
                 }
             }
         }
@@ -260,6 +262,11 @@ namespace SharpKeys
                            LinearGradientMode.Vertical);
 
             graphics.FillRectangle(linearGradientBrush, rectangle);
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
     }

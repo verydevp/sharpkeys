@@ -70,7 +70,6 @@ namespace SharpKeys
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dialog_KeyPress));
             this.mainPanel = new System.Windows.Forms.Panel();
             this.lblPressed = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -83,9 +82,9 @@ namespace SharpKeys
             // 
             // mainPanel
             // 
-            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mainPanel.Controls.Add(this.lblPressed);
             this.mainPanel.Controls.Add(this.label2);
@@ -93,9 +92,9 @@ namespace SharpKeys
             this.mainPanel.Controls.Add(this.btnCancel);
             this.mainPanel.Controls.Add(this.lblKey);
             this.mainPanel.Controls.Add(this.label1);
-            this.mainPanel.Location = new System.Drawing.Point(12, 12);
+            this.mainPanel.Location = new System.Drawing.Point(14, 11);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(329, 177);
+            this.mainPanel.Size = new System.Drawing.Size(383, 164);
             this.mainPanel.TabIndex = 12;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
@@ -103,17 +102,17 @@ namespace SharpKeys
             // 
             this.lblPressed.AutoSize = true;
             this.lblPressed.BackColor = System.Drawing.Color.Transparent;
-            this.lblPressed.Location = new System.Drawing.Point(13, 38);
+            this.lblPressed.Location = new System.Drawing.Point(15, 35);
             this.lblPressed.Name = "lblPressed";
-            this.lblPressed.Size = new System.Drawing.Size(0, 13);
+            this.lblPressed.Size = new System.Drawing.Size(0, 12);
             this.lblPressed.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(13, 27);
+            this.label2.Location = new System.Drawing.Point(15, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(307, 3);
+            this.label2.Size = new System.Drawing.Size(358, 3);
             this.label2.TabIndex = 16;
             // 
             // btnOK
@@ -121,66 +120,66 @@ namespace SharpKeys
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.Enabled = false;
-            this.btnOK.Location = new System.Drawing.Point(159, 140);
+            this.btnOK.Location = new System.Drawing.Point(187, 124);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(87, 30);
             this.btnOK.TabIndex = 14;
             this.btnOK.TabStop = false;
-            this.btnOK.Text = "OK";
+            this.btnOK.Text = "확인";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(240, 140);
+            this.btnCancel.Location = new System.Drawing.Point(280, 124);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(87, 30);
             this.btnCancel.TabIndex = 15;
             this.btnCancel.TabStop = false;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "취소";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblKey
             // 
             this.lblKey.BackColor = System.Drawing.Color.Transparent;
             this.lblKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKey.Location = new System.Drawing.Point(14, 57);
+            this.lblKey.Location = new System.Drawing.Point(16, 53);
             this.lblKey.Name = "lblKey";
-            this.lblKey.Size = new System.Drawing.Size(299, 59);
+            this.lblKey.Size = new System.Drawing.Size(349, 54);
             this.lblKey.TabIndex = 13;
-            this.lblKey.Text = "(press a key)";
+            this.lblKey.Text = "(키 입력)";
             this.lblKey.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Location = new System.Drawing.Point(15, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 13);
+            this.label1.Size = new System.Drawing.Size(137, 12);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Press a button on your keyboard.";
+            this.label1.Text = "키보드의 키를 누르세요.";
             // 
             // Dialog_KeyPress
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 201);
+            this.ClientSize = new System.Drawing.Size(412, 186);
             this.Controls.Add(this.mainPanel);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Dialog_KeyPress";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Type Key";
+            this.Closing += new System.ComponentModel.CancelEventHandler(this.Dialog_KeyPress_Closing);
+            this.Load += new System.EventHandler(this.Dialog_KeyPress_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Dialog_KeyPress_Paint);
             this.Resize += new System.EventHandler(this.Dialog_KeyPress_Resize);
-            this.Closing += new System.ComponentModel.CancelEventHandler(this.Dialog_KeyPress_Closing);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -192,7 +191,7 @@ namespace SharpKeys
         {
             // set up UI label
             if (lblPressed.Text.Length == 0)
-                lblPressed.Text = "You pressed: ";
+                lblPressed.Text = "누른 키: ";
 
             nCode = nCode >> 16;
 
@@ -228,7 +227,7 @@ namespace SharpKeys
             }
             else
             {
-                strShow = "Scan code: " + strCode;
+                strShow = "스캔 코드: " + strCode;
             }
             lblKey.Text = strShow;
 
@@ -285,6 +284,11 @@ namespace SharpKeys
                            LinearGradientMode.Vertical);
 
             graphics.FillRectangle(linearGradientBrush, rectangle);
+        }
+
+        private void Dialog_KeyPress_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
