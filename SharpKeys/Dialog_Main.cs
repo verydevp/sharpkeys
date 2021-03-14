@@ -392,7 +392,7 @@ namespace SharpKeys
             m_bDirty = false;
             Cursor = Cursors.Default;
 
-            MessageBox.Show("세이브 완료.\n\n로그아웃하거나 재부팅시 적용됨", "");
+            MessageBox.Show("세이브 완료되었습니다.\n\n로그아웃하거나 재부팅시 적용됩니다", "");
         }
 
         private byte[] DefineScancodeMap()
